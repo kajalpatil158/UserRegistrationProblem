@@ -9,10 +9,13 @@ namespace UserRegistrationProblem
     {
         string First_Name = "^[A-Za-z]";
         string Last_Name = "^[A-Za-z]";
+
         string Email_Id = "^[a-z0-9A-Z]+([.#_+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})*$";
-        public bool Validate(string first_name, string last_name,string email )
+        string Mobile_Number = "^[91]{2}[ ][0-9]{10,10}$";
+        public bool Validate(string first_name, string last_name,string email,string mobile_number )
         {
-            return Regex.IsMatch(first_name, First_Name) && Regex.IsMatch(last_name, Last_Name)&& Regex.IsMatch(email,Email_Id);
+            return Regex.IsMatch(first_name, First_Name) && Regex.IsMatch(last_name, Last_Name)&& 
+                Regex.IsMatch(email,Email_Id)&& Regex.IsMatch(mobile_number,Mobile_Number);
         }
     }
 } 
