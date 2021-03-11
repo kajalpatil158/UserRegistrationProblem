@@ -8,11 +8,10 @@ namespace UserRegistrationProblem
     class RegistrationForm
     {
         string First_Name = "^[A-Za-z]";
-        //string Last_Name = "^[A-Za-z]";
-        public bool Validate(string first_name)
+        string Last_Name = "^[A-Za-z]";
+        public bool Validate(string first_name, string last_name)
         {
-            return Regex.IsMatch(first_name, First_Name);
-           
+            return Regex.IsMatch(first_name, First_Name) && Regex.IsMatch(last_name, Last_Name);
         }
     }
-}
+} 

@@ -8,7 +8,7 @@ namespace UserRagistrationProblem
         static void Main(string[] args)
         {
             RegistrationForm registration = new RegistrationForm();
-            Console.WriteLine(registration.Validate("Kajal"));
+            Console.WriteLine(registration.Validate("Kajal","Patil"));
             Console.ReadLine();
 
         }
