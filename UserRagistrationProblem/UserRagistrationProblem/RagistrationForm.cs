@@ -12,7 +12,7 @@ namespace UserRegistrationProblem
 
         string Email_Id = "^[a-z0-9A-Z]+([.#_+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})*$";
         string Mobile_Number = "^[91]{2}[ ][0-9]{10,10}$";
-        string PassWord = "^[A-Z]{8}";
+        string PassWord = "^[A-Z]{1,}[0-9]{1,}";
         public bool Validate(string first_name, string last_name,string email,string mobile_number,string password )
         {
             return Regex.IsMatch(first_name, First_Name) && Regex.IsMatch(last_name, Last_Name)&& 
